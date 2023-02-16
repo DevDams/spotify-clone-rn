@@ -3,7 +3,7 @@ import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 import { FONTS } from "../../constants/fonts.styles";
 import { COLORS } from "../../constants/colors.styles";
 
@@ -29,9 +29,36 @@ const Starter = () => {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.black, alignItems: "center", justifyContent: "center" }} onLayout={onLayoutRootView}>
+    <SafeAreaView
+      style={{
+        flex: 1,
+        backgroundColor: COLORS.black,
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+      onLayout={onLayoutRootView}
+    >
       <View>
-        <Text style={{ fontFamily: FONTS.black, fontSize: 34, color: COLORS.green }}>Starter</Text>
+        <Image
+          source={require("./../../assets/images/google.png")}
+          fadeDuration={0}
+          style={{ width: 70, height: 70, resizeMode: "contain" }}
+        />
+        <Image
+          source={require("./../../assets/images/facebook.png")}
+          fadeDuration={0}
+          style={{ width: 60, height: 60, resizeMode: "contain" }}
+        />
+        <Image
+          source={require("./../../assets/images/apple.png")}
+          fadeDuration={0}
+          style={{ width: 60, height: 60, resizeMode: "contain" }}
+        />
+        <Text
+          style={{ fontFamily: FONTS.black, fontSize: 34, color: COLORS.gray }}
+        >
+          Starter
+        </Text>
       </View>
       <StatusBar style="light" />
     </SafeAreaView>
