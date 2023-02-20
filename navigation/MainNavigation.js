@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "../screens/home/Home";
 import Starter from "../screens/starter/Starter";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import EmailScreen from "../screens/create-account/EmailScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +17,7 @@ const MainNavigation = () => {
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Starter">
           <Stack.Screen name="Starter" component={Starter} options={{ title: "Starter", headerShown: false }} />
+          <Stack.Screen name="create-account-email" component={EmailScreen} options={{ title: "Create account", headerShown: false }} />
           <Stack.Screen name="Home" component={Home} options={{ title: "Home", headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
