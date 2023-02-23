@@ -61,15 +61,32 @@ const ChooseArtist = ({ navigation }) => {
           <HStack space={3} justifyContent="center">
             <View>
               <View className="bg-sky-400 w-24 h-24 rounded-full"></View>
+              <Text
+                className="text-white text-xs text-center mt-1"
+                style={{ fontFamily: FONTS.medium }}
+              >
+                Billie Eilish
+              </Text>
             </View>
             <View>
               <View className="bg-sky-400 w-24 h-24 rounded-full"></View>
+              <Text
+                className="text-white text-xs text-center mt-1"
+                style={{ fontFamily: FONTS.medium }}
+              >
+                Imagine Dragon
+              </Text>
             </View>
             <View>
               <View className="bg-sky-400 w-24 h-24 rounded-full"></View>
+              <Text
+                className="text-white text-xs text-center mt-1"
+                style={{ fontFamily: FONTS.medium }}
+              >
+                Ninho 
+              </Text>
             </View>
           </HStack>
-          
         </VStack>
       </ScrollView>
     </SafeAreaView>
