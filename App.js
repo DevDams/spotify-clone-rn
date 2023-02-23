@@ -1,11 +1,14 @@
 import { StyleSheet, View } from "react-native";
 import { Provider as PaperProvider } from "react-native-paper";
+import { NativeBaseProvider } from "native-base";
 import MainNavigation from "./navigation/MainNavigation";
 
 export default function App() {
   return (
     <PaperProvider>
-      <MainNavigation />
+      <NativeBaseProvider>
+        <MainNavigation />
+      </NativeBaseProvider>
     </PaperProvider>
   );
 }
