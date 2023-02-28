@@ -1,4 +1,5 @@
 import {
+  Image,
   ScrollView,
   StyleSheet,
   Text,
@@ -10,13 +11,23 @@ import { COLORS } from "../../constants/colors.styles";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { MaterialIcons } from "@expo/vector-icons";
 import { FONTS } from "../../constants/fonts.styles";
-import { Searchbar } from "react-native-paper";
+import { ActivityIndicator, Button, Searchbar } from "react-native-paper";
 import { HStack, VStack } from "native-base";
 
 const ChooseArtist = ({ navigation }) => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const onChangeSearch = (query) => setSearchQuery(query);
+
+  const loadingAnimation = () => {
+    setIsLoading(true)
+
+    setTimeout(() => {
+      setIsLoading(false)
+      navigation.navigate('home')
+    }, 2000);
+  }
 
   return (
     <SafeAreaView
@@ -57,10 +68,15 @@ const ChooseArtist = ({ navigation }) => {
       </View>
 
       <ScrollView className="flex-1 px-4 pt-5 pb-16">
-        <VStack space={4} alignItems="center">
+        <VStack space={8} alignItems="center">
           <HStack space={3} justifyContent="center">
             <View>
-              <View className="bg-sky-400 w-24 h-24 rounded-full"></View>
+              <View className="bg-neutral-700 w-24 h-24 rounded-full">
+                <Image
+                  source={require("./../../assets/images/billie.png")}
+                  className="w-full h-full rounded-full"
+                />
+              </View>
               <Text
                 className="text-white text-xs text-center mt-1"
                 style={{ fontFamily: FONTS.medium }}
@@ -69,7 +85,12 @@ const ChooseArtist = ({ navigation }) => {
               </Text>
             </View>
             <View>
-              <View className="bg-sky-400 w-24 h-24 rounded-full"></View>
+              <View className="bg-neutral-700 w-24 h-24 rounded-full">
+                <Image
+                  source={require("./../../assets/images/imagine_dragon.png")}
+                  className="w-full h-full rounded-full"
+                />
+              </View>
               <Text
                 className="text-white text-xs text-center mt-1"
                 style={{ fontFamily: FONTS.medium }}
@@ -78,17 +99,268 @@ const ChooseArtist = ({ navigation }) => {
               </Text>
             </View>
             <View>
-              <View className="bg-sky-400 w-24 h-24 rounded-full"></View>
+              <View className="bg-neutral-700 w-24 h-24 rounded-full">
+                <Image
+                  source={require("./../../assets/images/ninho.png")}
+                  className="w-full h-full rounded-full"
+                />
+              </View>
               <Text
                 className="text-white text-xs text-center mt-1"
                 style={{ fontFamily: FONTS.medium }}
               >
-                Ninho 
+                Ninho
               </Text>
             </View>
           </HStack>
+
+          <HStack space={3} justifyContent="center">
+            <View>
+              <View className="bg-neutral-700 w-24 h-24 rounded-full">
+                <Image
+                  source={require("./../../assets/images/tayc.png")}
+                  className="w-full h-full rounded-full"
+                />
+              </View>
+              <Text
+                className="text-white text-xs text-center mt-1"
+                style={{ fontFamily: FONTS.medium }}
+              >
+                Tayc
+              </Text>
+            </View>
+            <View>
+              <View className="bg-neutral-700 w-24 h-24 rounded-full">
+                <Image
+                  source={require("./../../assets/images/anne_marie.png")}
+                  className="w-full h-full rounded-full"
+                />
+              </View>
+              <Text
+                className="text-white text-xs text-center mt-1"
+                style={{ fontFamily: FONTS.medium }}
+              >
+                Anne Marie
+              </Text>
+            </View>
+            <View>
+              <View className="bg-neutral-700 w-24 h-24 rounded-full">
+                <Image
+                  source={require("./../../assets/images/juice.png")}
+                  className="w-full h-full rounded-full"
+                />
+              </View>
+              <Text
+                className="text-white text-xs text-center mt-1"
+                style={{ fontFamily: FONTS.medium }}
+              >
+                Juice WRLD
+              </Text>
+            </View>
+          </HStack>
+
+          <HStack space={3} justifyContent="center">
+            <View>
+              <View className="bg-neutral-700 w-24 h-24 rounded-full">
+                <Image
+                  source={require("./../../assets/images/back_number.png")}
+                  className="w-full h-full rounded-full"
+                />
+              </View>
+              <Text
+                className="text-white text-xs text-center mt-1"
+                style={{ fontFamily: FONTS.medium }}
+              >
+                Back Number
+              </Text>
+            </View>
+            <View>
+              <View className="bg-neutral-700 w-24 h-24 rounded-full">
+                <Image
+                  source={require("./../../assets/images/kemmler.png")}
+                  className="w-full h-full rounded-full"
+                />
+              </View>
+              <Text
+                className="text-white text-xs text-center mt-1"
+                style={{ fontFamily: FONTS.medium }}
+              >
+                Kemmler
+              </Text>
+            </View>
+            <View>
+              <View className="bg-neutral-700 w-24 h-24 rounded-full">
+                <Image
+                  source={require("./../../assets/images/yoasobi.png")}
+                  className="w-full h-full rounded-full"
+                />
+              </View>
+              <Text
+                className="text-white text-xs text-center mt-1"
+                style={{ fontFamily: FONTS.medium }}
+              >
+                Yoasobi
+              </Text>
+            </View>
+          </HStack>
+
+          <HStack space={3} justifyContent="center">
+            <View>
+              <View className="bg-neutral-700 w-24 h-24 rounded-full">
+                <Image
+                  source={require("./../../assets/images/niska.png")}
+                  className="w-full h-full rounded-full"
+                />
+              </View>
+              <Text
+                className="text-white text-xs text-center mt-1"
+                style={{ fontFamily: FONTS.medium }}
+              >
+                Niska
+              </Text>
+            </View>
+            <View>
+              <View className="bg-neutral-700 w-24 h-24 rounded-full">
+                <Image
+                  source={require("./../../assets/images/kerchab.png")}
+                  className="w-full h-full rounded-full"
+                />
+              </View>
+              <Text
+                className="text-white text-xs text-center mt-1"
+                style={{ fontFamily: FONTS.medium }}
+              >
+                Kerchab
+              </Text>
+            </View>
+            <View>
+              <View className="bg-neutral-700 w-24 h-24 rounded-full">
+                <Image
+                  source={require("./../../assets/images/sheeran.png")}
+                  className="w-full h-full rounded-full"
+                />
+              </View>
+              <Text
+                className="text-white text-xs text-center mt-1"
+                style={{ fontFamily: FONTS.medium }}
+              >
+                Ed Sheeran
+              </Text>
+            </View>
+          </HStack>
+
+          <HStack space={3} justifyContent="center">
+            <View>
+              <View className="bg-neutral-700 w-24 h-24 rounded-full">
+                <Image
+                  source={require("./../../assets/images/juice.png")}
+                  className="w-full h-full rounded-full"
+                />
+              </View>
+              <Text
+                className="text-white text-xs text-center mt-1"
+                style={{ fontFamily: FONTS.medium }}
+              >
+                Juice WRLD
+              </Text>
+            </View>
+            <View>
+              <View className="bg-neutral-700 w-24 h-24 rounded-full">
+                <Image
+                  source={require("./../../assets/images/imagine_dragon.png")}
+                  className="w-full h-full rounded-full"
+                />
+              </View>
+              <Text
+                className="text-white text-xs text-center mt-1"
+                style={{ fontFamily: FONTS.medium }}
+              >
+                Imagine Dragon
+              </Text>
+            </View>
+            <View>
+              <View className="bg-neutral-700 w-24 h-24 rounded-full">
+                <Image
+                  source={require("./../../assets/images/back_number.png")}
+                  className="w-full h-full rounded-full"
+                />
+              </View>
+              <Text
+                className="text-white text-xs text-center mt-1"
+                style={{ fontFamily: FONTS.medium }}
+              >
+                Back Number
+              </Text>
+            </View>
+          </HStack>
+
+          <HStack space={3} justifyContent="center">
+            <View>
+              <View className="bg-neutral-700 w-24 h-24 rounded-full">
+                <Image
+                  source={require("./../../assets/images/billie.png")}
+                  className="w-full h-full rounded-full"
+                />
+              </View>
+              <Text
+                className="text-white text-xs text-center mt-1"
+                style={{ fontFamily: FONTS.medium }}
+              >
+                Billie Eilish
+              </Text>
+            </View>
+            <View>
+              <View className="bg-neutral-700 w-24 h-24 rounded-full">
+                <Image
+                  source={require("./../../assets/images/tayc.png")}
+                  className="w-full h-full rounded-full"
+                />
+              </View>
+              <Text
+                className="text-white text-xs text-center mt-1"
+                style={{ fontFamily: FONTS.medium }}
+              >
+                Tayc
+              </Text>
+            </View>
+            <View>
+              <View className="bg-neutral-700 w-24 h-24 rounded-full">
+                <Image
+                  source={require("./../../assets/images/ninho.png")}
+                  className="w-full h-full rounded-full"
+                />
+              </View>
+              <Text
+                className="text-white text-xs text-center mt-1"
+                style={{ fontFamily: FONTS.medium }}
+              >
+                Ninho
+              </Text>
+            </View>
+          </HStack>
+
+          <View className="w-full mt-10 mb-20">
+            <Button
+              className="w-2/3 mx-auto h-11 bg-white rounded-full"
+              contentStyle={{ height: "100%" }}
+              textColor="black"
+              children={
+                <TouchableWithoutFeedback>
+                  <Text style={{ fontFamily: FONTS.black, color: "black" }}>
+                    Done
+                  </Text>
+                </TouchableWithoutFeedback>
+              }
+              onPress={() => loadingAnimation()}
+            />
+          </View>
         </VStack>
       </ScrollView>
+
+      {/* Loading Page */}
+      {isLoading ? <View className="absolute bottom-0 flex-1 w-full h-full bg-black items-center justify-center">
+        <ActivityIndicator animating={isLoading} color="#22c55e" size="40" />
+      </View> : null}
     </SafeAreaView>
   );
 };

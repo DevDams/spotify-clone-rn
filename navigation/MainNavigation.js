@@ -45,7 +45,7 @@ const MainNavigation = () => {
             }}
           />
           <Stack.Screen
-            name="Home"
+            name="home"
             component={Home}
             options={{
               title: "Home",
