@@ -134,7 +134,7 @@ const Starter = ({ navigation }) => {
           />
 
           {/* Button 4 */}
-          <Button
+          {/* <Button
             className="w-full h-12 rounded-full flex items-center justify-center text-white mt-4"
             textColor="black"
             style={{
@@ -154,7 +154,7 @@ const Starter = ({ navigation }) => {
                 </Text>
               </TouchableWithoutFeedback>
             }
-          />
+          /> */}
 
         </View>
       </View>

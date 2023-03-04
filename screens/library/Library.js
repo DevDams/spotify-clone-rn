@@ -1,13 +1,13 @@
-import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
+import React, { useState } from 'react'
 import { FONTS } from "../../constants/fonts.styles";
 import { COLORS } from "../../constants/colors.styles";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
-import { HStack, ScrollView } from "native-base";
-import { useState } from "react";
+import { HStack } from "native-base";
 
-const Home = ({ navigation }) => {
-  const [activeTab, setActiveTab] = useState(0)
+const Library = ({ navigation }) => {
+  const [activeTab, setActiveTab] = useState(2)
 
   const tabNavigation = (tab) => {
     setActiveTab(tab)
@@ -28,12 +28,7 @@ const Home = ({ navigation }) => {
         position: "relative",
       }}
     >
-      <ScrollView
-        className="relative flex-1 w-full h-full bg-white z-10"
-        style={{ backgroundColor: COLORS.black }}
-      >
-        <Text className="text-3xl text-white">Homme</Text>
-      </ScrollView>
+      <Text>Search</Text>
 
       <LinearGradient
         colors={["transparent", "#0000004f", "#00000099", "#00000099", "#000000d1", "#000000d1", "#000000d1", "#000000d1", "#000000d1"]}
@@ -43,8 +38,8 @@ const Home = ({ navigation }) => {
         <HStack space={3} justifyContent="space-between">
           <TouchableOpacity onPress={() => tabNavigation(0)}>
             <View className="items-center">
-              <Image source={require("./../../assets/images/home-png.png")} alt="" className="object-contain" style={{ width: 20, height: 20 }} />
-              <Text className="text-white text-[11px] mt-1" style={{ fontFamily: FONTS.medium }}>
+              <Image source={require("./../../assets/images/home-outline.png")} alt="" className="object-contain" style={{ width: 18, height: 20 }} />
+              <Text className="text-[#777] text-[11px] mt-1" style={{ fontFamily: FONTS.medium }}>
                 Home
               </Text>
             </View>
@@ -59,22 +54,18 @@ const Home = ({ navigation }) => {
           </TouchableOpacity>
           <TouchableOpacity onPress={() => tabNavigation(2)}>
             <View className="items-center">
-              <Image source={require("./../../assets/images/library-png.png")} alt="" className="object-contain" style={{ width: 20, height: 20 }} />
-              <Text className="text-[#777] text-[11px] mt-1" style={{ fontFamily: FONTS.medium }}>
+              <Image source={require("./../../assets/images/library-bold.png")} alt="" className="object-contain" style={{ width: 20, height: 20 }} />
+              <Text className="text-white text-[11px] mt-1" style={{ fontFamily: FONTS.medium }}>
                 Library
               </Text>
             </View>
           </TouchableOpacity>
-
-
-
         </HStack>
-
       </LinearGradient>
     </SafeAreaView>
-  );
-};
+  )
+}
 
-export default Home;
+export default Library
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({})

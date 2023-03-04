@@ -9,6 +9,8 @@ import Starter from "../screens/starter/Starter";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import EmailScreen from "../screens/create-account/EmailScreen";
 import ChooseArtist from "../screens/choose-artiste/ChooseArtist";
+import Search from "../screens/search/Search";
+import Library from "../screens/library/Library";
 
 const Stack = createNativeStackNavigator();
 
@@ -50,7 +52,25 @@ const MainNavigation = () => {
             options={{
               title: "Home",
               headerShown: false,
-              animation: "slide_from_right",
+              animation: "none",
+            }}
+          />
+          <Stack.Screen
+            name="search"
+            component={Search}
+            options={{
+              title: "Rechercher",
+              headerShown: false,
+              animation: "none",
+            }}
+          />
+          <Stack.Screen
+            name="library"
+            component={Library}
+            options={{
+              title: "Bibliothèque",
+              headerShown: false,
+              animation: "none",
             }}
           />
         </Stack.Navigator>
