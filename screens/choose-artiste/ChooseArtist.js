@@ -26,7 +26,7 @@ const ChooseArtist = ({ navigation }) => {
     setTimeout(() => {
       setIsLoading(false)
       navigation.navigate('home')
-    }, 2000);
+    }, 5000);
   }
 
   return (

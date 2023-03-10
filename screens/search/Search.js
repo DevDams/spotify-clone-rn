@@ -57,11 +57,84 @@ const Search = ({ navigation }) => {
       </View>
 
       <ScrollView>
+        <View className="mt-6 px-4">
+          <Text className="text-lg text-white" style={{ fontFamily: FONTS.bold }}>Your top genres</Text>
+
+          <HStack space={3} justifyContent="center" mt="3" px="2">
+            <View className="w-1/2 h-20">
+              <Image source={require("./../../assets/images/img2.png")} alt="" className="w-full h-full rounded-md" style={{ resizeMode: "cover"}} />
+            </View>
+            <View className="w-1/2 h-20">
+              <Image source={require("./../../assets/images/img3.png")} alt="" className="w-full h-full rounded-md" style={{ resizeMode: "cover"}} />
+            </View>
+          </HStack>
+        </View>
         
+        <View className="mt-6 px-4">
+          <Text className="text-lg text-white" style={{ fontFamily: FONTS.bold }}>Popular podcast categories</Text>
+
+          <HStack space={3} justifyContent="center" mt="3" px="2">
+            <View className="w-1/2 h-20">
+              <Image source={require("./../../assets/images/img1.png")} alt="" className="w-full h-full rounded-md" style={{ resizeMode: "cover"}} />
+            </View>
+            <View className="w-1/2 h-20">
+              <Image source={require("./../../assets/images/img4.png")} alt="" className="w-full h-full rounded-md" style={{ resizeMode: "cover"}} />
+            </View>
+          </HStack>
+        </View>
+        
+        <View className="mt-6 px-4">
+          <Text className="text-lg text-white" style={{ fontFamily: FONTS.bold }}>Browse all</Text>
+
+          <HStack space={3} justifyContent="center" mt="3" px="2">
+            <View className="w-1/2 h-20">
+              <Image source={require("./../../assets/images/img5.png")} alt="" className="w-full h-full rounded-md" style={{ resizeMode: "cover"}} />
+            </View>
+            <View className="w-1/2 h-20">
+              <Image source={require("./../../assets/images/img6.png")} alt="" className="w-full h-full rounded-md" style={{ resizeMode: "cover"}} />
+            </View>
+          </HStack>
+          
+          <HStack space={3} justifyContent="center" mt="3" px="2">
+            <View className="w-1/2 h-20">
+              <Image source={require("./../../assets/images/img7.png")} alt="" className="w-full h-full rounded-md" style={{ resizeMode: "cover"}} />
+            </View>
+            <View className="w-1/2 h-20">
+              <Image source={require("./../../assets/images/img8.png")} alt="" className="w-full h-full rounded-md" style={{ resizeMode: "cover"}} />
+            </View>
+          </HStack>
+          
+          <HStack space={3} justifyContent="center" mt="3" px="2">
+            <View className="w-1/2 h-20">
+              <Image source={require("./../../assets/images/img9.png")} alt="" className="w-full h-full rounded-md" style={{ resizeMode: "cover"}} />
+            </View>
+            <View className="w-1/2 h-20">
+              <Image source={require("./../../assets/images/img10.png")} alt="" className="w-full h-full rounded-md" style={{ resizeMode: "cover"}} />
+            </View>
+          </HStack>
+          
+          <HStack space={3} justifyContent="center" mt="3" px="2">
+            <View className="w-1/2 h-20">
+              <Image source={require("./../../assets/images/img2.png")} alt="" className="w-full h-full rounded-md" style={{ resizeMode: "cover"}} />
+            </View>
+            <View className="w-1/2 h-20">
+              <Image source={require("./../../assets/images/img6.png")} alt="" className="w-full h-full rounded-md" style={{ resizeMode: "cover"}} />
+            </View>
+          </HStack>
+          
+          <HStack space={3} justifyContent="center" mt="3" px="2" pb="16">
+            <View className="w-1/2 h-20">
+              <Image source={require("./../../assets/images/img2.png")} alt="" className="w-full h-full rounded-md" style={{ resizeMode: "cover"}} />
+            </View>
+            <View className="w-1/2 h-20">
+              <Image source={require("./../../assets/images/img10.png")} alt="" className="w-full h-full rounded-md" style={{ resizeMode: "cover"}} />
+            </View>
+          </HStack>
+        </View>
       </ScrollView>
 
       <LinearGradient
-        colors={["transparent", "#0000004f", "#00000099", "#00000099", "#000000d1", "#000000d1", "#000000d1", "#000000d1", "#000000d1"]}
+        colors={["transparent",  "#000000d1", "#000000d1", "#000000d1", "#000000d1"]}
         className="absolute bottom-0 w-full h-20 z-50 justify-center px-12"
         style={{ zIndex: 999 }}
       >

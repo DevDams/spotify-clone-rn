@@ -12,6 +12,7 @@ import { COLORS } from "../../constants/colors.styles";
 import { FONTS } from "../../constants/fonts.styles";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Button, RadioButton, Divider } from "react-native-paper";
+import { HStack } from "native-base";
 
 const EmailScreen = ({ navigation }) => {
   const [step, setStep] = useState("EMAIL");
@@ -216,8 +217,8 @@ const EmailScreen = ({ navigation }) => {
 
             <View className="mt-7">
               <Text className="text-green-500 text-sm" style={{ fontFamily: FONTS.medium }}>Privacy Policy</Text>
-              <View className="flex flex-row items-center justify-between gap-x-3">
-                <Text className="text-white text-xs" style={{ fontFamily: FONTS.book }}>
+              <HStack space={3} alignItems="center" justifyContent="space-between">
+                <Text className="text-white text-xs w-64" style={{ fontFamily: FONTS.book }}>
                   Please send me news and offers from Spotify.
                 </Text>
                 <RadioButton
@@ -226,9 +227,9 @@ const EmailScreen = ({ navigation }) => {
                   onPress={() => setChecked(!checked)}
                   color="#22c55e"
                 />
-              </View>
-              <View className="flex flex-row items-center justify-between gap-x-3 mt-1">
-                <Text className="text-white text-xs" style={{ fontFamily: FONTS.book }}>
+              </HStack>
+              <HStack space={3} alignItems="center" justifyContent="space-between" mt="1">
+                <Text className="text-white text-xs w-64" style={{ fontFamily: FONTS.book }}>
                   Share my registration data with Spotify’s content providers
                   for marketing purposes.
                 </Text>
@@ -238,7 +239,7 @@ const EmailScreen = ({ navigation }) => {
                   onPress={() => setChecked2(!checked2)}
                   color="#22c55e"
                 />
-              </View>
+              </HStack>
             </View>
           </View>
 
